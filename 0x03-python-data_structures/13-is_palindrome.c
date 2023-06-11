@@ -35,11 +35,15 @@ int is_palindrome(listint_t **head)
 		list[i] = current->n;
 		current = current->next;
 	}
-	/* Check if the list is palindrome */
+	/* Check if the list is palindrome then FREE IT */
 	for (i = 0, j = size - 1; i < size / 2; i++, j--)
 	{
 		if (list[i] != list[j])
+		{
+			free(list)
 			return (0);
+		}
 	}
+	free(list)
 	return (1);
 }
