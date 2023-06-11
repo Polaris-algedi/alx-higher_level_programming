@@ -18,10 +18,10 @@ int is_palindrome(listint_t **head)
 		current = current->next;
 	}
 
+	if (size == 0 || size == 1)
+		return (1);
 	if (size % 2 != 0)
 		return (0);
-	if (size == 0)
-		return (1);
 	/* Create the list */
 	list = malloc(sizeof(int) * size);
 	if (list == NULL)
