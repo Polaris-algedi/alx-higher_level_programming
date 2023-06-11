@@ -10,8 +10,12 @@
 int is_palindrome(listint_t **head)
 {
 	int i, j, size = 0, *list;
-	listint_t *current = *head;
+	listint_t *current;
+
+	if (!head)
+		return (0);
 	/* Count the size of the linked list */
+	current = *head;
 	while (current)
 	{
 		size++;
@@ -24,10 +28,8 @@ int is_palindrome(listint_t **head)
 		return (0);
 	/* Create the list */
 	list = malloc(sizeof(int) * size);
-	if (list == NULL)
-	{
+	if (!list)
 		return (0);
-	}
 	/* fill up the list */
 	current = *head;
 	for (i = 0; current; i++)
