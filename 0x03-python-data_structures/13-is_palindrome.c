@@ -40,10 +40,10 @@ int is_palindrome(listint_t **head)
 	{
 		if (list[i] != list[j])
 		{
-			free(list)
+			free(list);
 			return (0);
 		}
 	}
-	free(list)
+	free(list);
 	return (1);
 }
