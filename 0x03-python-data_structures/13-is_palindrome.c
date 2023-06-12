@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "lists.h"
 
 /**
@@ -9,7 +8,7 @@
  */
 int is_palindrome(listint_t **head)
 {
-	int i, j, size = 0, *list;
+	int i, j, size = 0, list[2048];
 	listint_t *current;
 
 	if (!head)
@@ -24,10 +23,6 @@ int is_palindrome(listint_t **head)
 
 	if (size == 0 || size == 1)
 		return (1);
-	/* Create the list */
-	list = malloc(sizeof(int) * size);
-	if (!list)
-		return (0);
 	/* fill up the list */
 	current = *head;
 	for (i = 0; current; i++)
@@ -35,15 +30,11 @@ int is_palindrome(listint_t **head)
 		list[i] = current->n;
 		current = current->next;
 	}
-	/* Check if the list is palindrome then FREE IT */
+	/* Check if the list is palindrome */
 	for (i = 0, j = size - 1; i < size / 2; i++, j--)
 	{
 		if (list[i] != list[j])
-		{
-			free(list);
 			return (0);
-		}
 	}
-	free(list);
 	return (1);
 }
