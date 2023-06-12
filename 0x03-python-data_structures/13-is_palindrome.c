@@ -24,8 +24,6 @@ int is_palindrome(listint_t **head)
 
 	if (size == 0 || size == 1)
 		return (1);
-	if (size % 2 != 0)
-		return (0);
 	/* Create the list */
 	list = malloc(sizeof(int) * size);
 	if (!list)
