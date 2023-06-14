@@ -5,6 +5,9 @@ def uniq_add(my_list=[]):
 
     Args:
         my_list: list of integers
+
+    Returns:
+        The sum of all unique integers
     """
     int_sum = 0
     for i in set(my_list):

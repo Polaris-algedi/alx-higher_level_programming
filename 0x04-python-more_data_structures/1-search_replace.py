@@ -7,5 +7,8 @@ def search_replace(my_list, search, replace):
         my_list: list of integers
         search: the element to replace in the list
         replace: the new element
+
+    Returns:
+        The new list.
     """
     return [x if x != search else replace for x in my_list]
