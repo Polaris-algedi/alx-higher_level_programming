@@ -87,7 +87,7 @@ class Square:
         """Create a string that resembles the square"""
         pstr = ""
         if self.__size == 0:
-            pass
+            return pstr
         else:
             pstr += "\n" * self.__position[1]
             for i in range(self.__size):
