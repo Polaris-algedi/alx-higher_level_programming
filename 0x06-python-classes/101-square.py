@@ -84,6 +84,7 @@ class Square:
                 print()
 
     def __str__(self):
+        """Create a string that resembles the square"""
         pstr = ""
         if self.__size == 0:
             pass
