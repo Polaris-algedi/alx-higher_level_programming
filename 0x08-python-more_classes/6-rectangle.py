@@ -74,7 +74,7 @@ class Rectangle:
             return rect
         for i in range(self.__height):
             rect += '#' * self.__width + "\n"
-        return rect
+        return rect[:-1]
 
     def __repr__(self):
         """Create an 'official' string representation of
