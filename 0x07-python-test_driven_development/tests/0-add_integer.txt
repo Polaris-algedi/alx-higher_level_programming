@@ -1,0 +1,60 @@
+The ``0-add_integer`` module
+============================
+
+Using ``add_integer``
+---------------------
+
+Importing ``add_integer`` from the ``0-add_integer`` module:
+        >>> add_integer = __import__('0-add_integer').add_integer
+
+Adding positive integers 5 and 10
+        >>> add_integer(5, 10)
+        15
+
+Adding positive integer and negative one
+        >>> add_integer(10, -5)
+        5
+
+Adding positive floats
+        >>> add_integer(5.5, 10.5)
+        15
+
+Adding positive float and negative one
+        >>> add_integer(10.5, -5.5)
+        5
+
+Passing character as argument
+        >>> add_integer("C", -5.5)
+        Traceback (most recent call last):
+	      ...
+        TypeError: a must be an integer
+
+Passing string as argument
+        >>> add_integer(2, "ALX")
+        Traceback (most recent call last):
+	      ...
+        TypeError: b must be an integer
+        
+Adding a number and a list
+    >>> add_integer(123, [1, 2, 3])
+    Traceback (most recent call last):
+	      ...
+    TypeError: b must be an integer
+
+Passing None as argument
+    >>> add_integer(None, 1)
+    Traceback (most recent call last):
+	      ...
+    TypeError: a must be an integer
+
+Passing NaN as argument
+    >>> add_integer(10, float('nan'))
+    Traceback (most recent call last):
+    	      ...
+    ValueError: cannot convert float NaN to integer
+    
+Passing infinity:
+	>>> add_integer(float('inf'), 0)
+	Traceback (most recent call last):
+    		...
+	OverflowError: cannot convert float infinity to integer
