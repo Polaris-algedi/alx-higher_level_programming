@@ -30,14 +30,14 @@ Passing a float number as the size of the square
 
 Passing a string as the size of the square
 
-    >>> print_square('2')
+    >>> print_square('Hi')
     Traceback (most recent call last):
     	      ...
     TypeError: size must be an integer
 
 Passing a negative number as the size of the square
 
-    >>> print_square(-2)
+    >>> print_square(-10)
     Traceback (most recent call last):
     	     ...
     ValueError: size must be >= 0
