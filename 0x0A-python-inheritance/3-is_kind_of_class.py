@@ -8,8 +8,8 @@ def is_kind_of_class(obj, a_class):
     the specified class, otherwise False.
 
     Args:
-        obj (a_class): object to check type.
-        a_class (type): type of type to check.
+        obj (a_class): object to compare.
+        a_class (type): type to be compared against.
 
     Returns:
         bool: True for success, False otherwise.
