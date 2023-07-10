@@ -28,6 +28,6 @@ class Rectangle(BaseGeometry):
         """Create an 'informal' and nicely printable string
         representation of the rectangle instance
         """
-        string = "[" + str(self.__class__.__name__) + "] "
-        string += str(self.__width) + "/" + str(self.__height)
+        string = f"[{str(self.__class__.__name__)}] "
+        string += f"{str(self.__width)}/{str(self.__height)}"
         return string
