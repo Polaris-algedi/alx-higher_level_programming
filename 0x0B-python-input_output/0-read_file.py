@@ -9,4 +9,5 @@ def read_file(filename=""):
         filename: The name of the file
     """
     with open(filename) as f:
-        print(f.read())
+        for line in f:
+            print(line, end="") 
