@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module contains a function that read a file"""
+"""Examples to demonstrate how Input/Output works in python"""
 
 
 def read_file(filename=""):
