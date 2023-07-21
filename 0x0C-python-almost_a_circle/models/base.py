@@ -10,11 +10,11 @@ class Base:
 
     def __init__(self, id=None):
         """Initializes instances of the Base class with a unique identifier."""
-        if id is not None:
-            self.id = id
-        else:
+        if id is None:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+        else:
+            self.id = id
 
     @staticmethod
     def to_json_string(list_dictionaries):
@@ -44,7 +44,7 @@ class Base:
         of attributes."""
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
-        if cls.__name__ == "Square":
+        elif cls.__name__ == "Square":
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
