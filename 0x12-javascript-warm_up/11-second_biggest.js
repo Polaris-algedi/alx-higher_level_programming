@@ -2,20 +2,16 @@
 
 const args = process.argv.slice(2); // Remove the first two elements (node and script name)
 
-function findSecondBiggest (list) {
-  let biggest = Number(list[0]);
-  let secondBiggest = Number(list[1]);
-  for (const n of list) {
-    if (biggest < n) {
-      secondBiggest = biggest;
-      biggest = n;
-    }
+function findSecondLargest (args) {
+  if (args.length <= 1) {
+    return 0;
   }
-  return (secondBiggest);
+
+  const numbers = args.map(Number); // Convert arguments to an array of numbers
+  // Sort the array of numbers in descending order
+  const sortedNumbers = numbers.sort((a, b) => b - a);
+  const secondLargest = sortedNumbers[1];
+  return secondLargest;
 }
 
-if (args.length < 2) {
-  console.log(0);
-} else {
-  console.log(findSecondBiggest(args));
-}
+console.log(findSecondLargest(args));
