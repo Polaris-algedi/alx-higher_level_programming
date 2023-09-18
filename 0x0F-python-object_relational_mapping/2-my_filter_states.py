@@ -37,7 +37,8 @@ if __name__ == "__main__":
     cur.execute(query)
     rows = cur.fetchall()
     for row in rows:
-        print(row)
+        if row[1] == sys.argv[4]:
+            print(row)
 
     cur.close()
     db.close()
