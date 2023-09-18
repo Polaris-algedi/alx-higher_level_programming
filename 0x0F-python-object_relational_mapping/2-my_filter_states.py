@@ -33,8 +33,8 @@ if __name__ == "__main__":
             charset="utf8")
 
     cur = db.cursor()
-    query = f"SELECT * FROM states WHERE name='{sys.argv[4]}' ORDER BY id ASC"
-    cur.execute(query)
+    cur.execute("SELECT * FROM states WHERE name LIKE '{:s}' ORDER BY \
+    id ASC".format(sys.argv[4]))
     rows = cur.fetchall()
     for row in rows:
         if row[1] == sys.argv[4]:
