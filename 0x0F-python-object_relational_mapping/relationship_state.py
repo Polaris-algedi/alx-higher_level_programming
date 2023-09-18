@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Module: relationship_state 
+Module: relationship_state
 
 This module defines the State class representing a state.
 """

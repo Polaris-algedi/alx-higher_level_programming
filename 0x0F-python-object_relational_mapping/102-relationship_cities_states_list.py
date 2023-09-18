@@ -18,4 +18,4 @@ if __name__ == "__main__":
     with Session(engine) as session:
         cities = session.query(City).all()
         for city in cities:
-            print("{}: {} -> {}".format(city.id, city.name, city.state.name))
+            print(f"{city.id}: {city.name} -> {city.state.name}")
