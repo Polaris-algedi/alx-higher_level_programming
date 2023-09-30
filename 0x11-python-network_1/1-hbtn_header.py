@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-"""
-This module sends a request to a URL and displays the 'X-Request-Id'
-from the response header.
-"""
+"""This module sends a request to a URL and displays the 'X-Request-Id'
+from the response header."""
 
 
 if __name__ == "__main__":
