@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-"""This module sends a request to a URL and displays the 'X-Request-Id'
-from the response header."""
-
+"""Python script that displays the value of the X-Request-Id variable"""
+import urllib.request
+import sys
 
 if __name__ == "__main__":
-    import urllib.request
-    import sys
     with urllib.request.urlopen(sys.argv[1]) as response:
-        x_request_id = response.info()
-        print(x_request_id.get('X-Request-Id'))
+        info = response.info()
+        print(info.get("X-Request-Id"))
